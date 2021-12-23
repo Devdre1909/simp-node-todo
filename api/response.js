@@ -2,13 +2,13 @@ export const successResponse = (req) => {
   return {
     error: false,
     message: req.message,
-    body: req.data
+    body: req.data,
   }
 }
 
 export const errorResponse = (error) => {
-  if (process.env.NoDE_ENV === "development"){
-    console.dir({error});
+  if (process.env.NODE_ENV === 'development') {
+    console.dir({ error })
   }
   return {
     error: true,
